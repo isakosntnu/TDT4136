@@ -158,21 +158,21 @@ def min_value_alpha_beta(game, state, player, alpha, beta):
     return v, best_action
 
 
-# Timing and comparing Minimax and Alpha-beta pruning
+# Timing and comparing Minimax and Alphabeta
 game = Game()
 state = game.initial_state()
 
 # Timing Minimax
-# start_time_minimax = time.time()
-# minimax_move = minimax_search(game, state)
-# minimax_time = time.time() - start_time_minimax
+start_time_minimax = time.time()
+minimax_move = minimax_search(game, state)
+minimax_time = time.time() - start_time_minimax
 
-# # Timing Alpha-beta pruning
-# start_time_alpha_beta = time.time()
-# alpha_beta_move = alpha_beta_search(game, state)
-# alpha_beta_time = time.time() - start_time_alpha_beta
-# print(f"Minimax move: {minimax_move}, Time taken: {minimax_time:.4f} seconds")
-# print(f"Alpha-beta move: {alpha_beta_move}, Time taken: {alpha_beta_time:.4f} seconds")
+# # Timing Alphabeta
+start_time_alpha_beta = time.time()
+alpha_beta_move = alpha_beta_search(game, state)
+alpha_beta_time = time.time() - start_time_alpha_beta
+print(f"Minimax move: {minimax_move}, Time taken: {minimax_time:.4f} seconds")
+print(f"Alpha-beta move: {alpha_beta_move}, Time taken: {alpha_beta_time:.4f} seconds")
 
 # Play using Alpha-beta pruning (You can change this to minimax_search to compare in action)
 while not game.is_terminal(state):
